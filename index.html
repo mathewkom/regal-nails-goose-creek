@@ -16,46 +16,50 @@
 
     * { box-sizing: border-box; }
 
+    html, body { min-height: 100%; }
+
     body {
       margin: 0;
       background: #fff;
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.55;
+      line-height: 1.42;
     }
 
     main {
-      width: min(720px, calc(100% - 40px));
-      margin: 72px auto;
+      width: min(860px, calc(100% - 36px));
+      margin: 28px auto 22px;
     }
 
     h1 {
-      margin: 0 0 18px;
-      font-size: clamp(30px, 5vw, 46px);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4.3vw, 46px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
     }
 
-    p {
-      margin: 0 0 18px;
-      font-size: 18px;
+    .intro {
+      margin: 0 0 16px;
+      font-size: 17px;
+      max-width: 780px;
     }
 
     .domain-box {
-      margin: 30px 0;
-      padding: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 16px 0;
+      padding: 17px 19px;
       border: 1px solid var(--line);
       border-radius: 12px;
       background: var(--panel);
     }
 
-    .row + .row { margin-top: 18px; }
-
     .label {
       display: block;
       margin-bottom: 4px;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -63,53 +67,114 @@
 
     .domain {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: clamp(17px, 3vw, 22px);
+      font-size: clamp(16px, 2.25vw, 21px);
       overflow-wrap: anywhere;
     }
 
     .corrected { font-weight: 700; }
 
-    .contact {
-      margin-top: 30px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
+    .grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 17px;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .transfer {
+      padding-left: 22px;
+      border-left: 1px solid var(--line);
+    }
+
+    .transfer p {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 2px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
     }
 
     .small {
-      margin-top: 40px;
+      margin: 18px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    @media (max-width: 520px) {
-      main { margin: 44px auto; }
-      p { font-size: 17px; }
+    @media (max-width: 700px) {
+      main { margin-top: 22px; }
+      .domain-box, .grid { grid-template-columns: 1fr; }
+      .domain-box { gap: 12px; }
+      .grid { gap: 18px; }
+      .transfer { padding-left: 0; border-left: 0; }
+    }
+
+    @media (max-height: 720px) and (min-width: 701px) {
+      main { margin-top: 18px; }
+      h1 { font-size: 38px; }
+      .intro { font-size: 16px; margin-bottom: 12px; }
+      .domain-box { margin: 12px 0; padding: 14px 17px; }
+      li, .transfer p { font-size: 15px; }
+      .small { margin-top: 13px; }
     }
   </style>
 </head>
 <body>
   <main>
     <h1>Corrected web address for Regal Nails Goose Creek</h1>
-
-    <p>I own the correctly spelled version of the web address currently being used by the Regal Nails location in Goose Creek, South Carolina, and I am offering to transfer it to the local owner/operator.</p>
+    <p class="intro">I own the correctly spelled version of the web address currently being used by the Regal Nails location in Goose Creek, South Carolina, and I am offering to transfer it to the local owner/operator.</p>
 
     <div class="domain-box" aria-label="Current and corrected web addresses">
-      <div class="row">
+      <div>
         <span class="label">Current web address</span>
         <div class="domain">regalnailsgoosegreek.com</div>
       </div>
-      <div class="row">
+      <div>
         <span class="label">Corrected web address</span>
         <div class="domain corrected">regalnailsgoosecreek.com</div>
       </div>
     </div>
 
-    <p>No website rebuild is necessary. The corrected domain can simply point to the website the salon already uses, so customers who type the expected spelling can still reach the existing site.</p>
+    <div class="grid">
+      <section>
+        <h2>Why the corrected domain matters</h2>
+        <ul>
+          <li>Easier for customers to remember and type correctly.</li>
+          <li>Reduces lost direct traffic from people using the expected spelling.</li>
+          <li>Presents a cleaner, more trustworthy address in listings, print, and word-of-mouth.</li>
+          <li>Can point to the existing website with no rebuild required.</li>
+        </ul>
+      </section>
 
-    <p>If you are the owner or operator of the Goose Creek location and would like to take ownership of this domain, please use the contact information in the letter you received from Mathew. I can handle the domain transfer and help get it pointed to the existing website.</p>
-
-    <div class="contact">
-      <p><strong>This domain is currently available for transfer to the local business.</strong></p>
+      <section class="transfer">
+        <h2>Available for transfer</h2>
+        <p>I can transfer the corrected domain to the Goose Creek owner/operator and help point it to the website you already use.</p>
+        <a class="email" href="mailto:mathew@mannerswild.com">mathew@mannerswild.com</a>
+      </section>
     </div>
 
     <p class="small">This page is not affiliated with or operated by Regal Nails. It exists solely to contact the local Goose Creek business regarding transfer of this domain.</p>
